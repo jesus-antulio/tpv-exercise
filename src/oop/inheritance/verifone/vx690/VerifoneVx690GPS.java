@@ -1,6 +1,10 @@
 package oop.inheritance.verifone.vx690;
 
-public class VerifoneVx690GPS {
+import oop.inheritance.data.Transaction;
+import oop.inheritance.data.TransactionResponse;
+import oop.inheritance.tpv.CommunicationDevice;
+
+public class VerifoneVx690GPS implements CommunicationDevice {
     /**
      * Opens a connection using the GPS device
      *
@@ -14,10 +18,10 @@ public class VerifoneVx690GPS {
     /**
      * Sends a message to the server
      *
-     * @param message message to be sent to the server
+     * @param transaction message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(byte[] message) {
+    public boolean send(Transaction transaction) {
         return true;
     }
 
@@ -26,8 +30,8 @@ public class VerifoneVx690GPS {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public byte[] receive() {
-        return "response".getBytes();
+    public TransactionResponse receive() {
+        return new TransactionResponse(true, "12314");
     }
 
     /**

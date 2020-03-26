@@ -7,7 +7,7 @@ public class VerifoneV240mDisplay implements Display {
 
     private static VerifoneV240mDisplay v240Display;
 
-    private VerifoneV240mDisplay(){
+    public VerifoneV240mDisplay(){
 
     }
 
