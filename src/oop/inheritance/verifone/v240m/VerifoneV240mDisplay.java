@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.v240m;
 
-public class VerifoneV240mDisplay {
+import oop.inheritance.tpv.Display;
+
+public class VerifoneV240mDisplay implements Display {
 
     /**
      * Prints a message to specied position
