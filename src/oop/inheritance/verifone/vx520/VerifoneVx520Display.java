@@ -1,6 +1,21 @@
 package oop.inheritance.verifone.vx520;
 
-public class VerifoneVx520Display {
+import oop.inheritance.tpv.Display;
+
+public class VerifoneVx520Display implements Display {
+
+    private static VerifoneVx520Display Vx520Display;
+
+    private VerifoneVx520Display(){
+
+    }
+
+    public static VerifoneVx520Display getInstance(){
+        if(Vx520Display == null){
+            Vx520Display = new VerifoneVx520Display();
+        }
+        return Vx520Display;
+    }
 
     /**
      * Prints a message to specied position
